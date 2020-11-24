@@ -295,16 +295,6 @@ shinyServer(function(input, output) {
 
     
 
-
-
-    # colfijo <- c("steelblue1", "sienna1", "yellowgreen", "red", "yellow", "purple", "grey", "brown", "darkslategray1", "indianred1", "wheat1", "tan1", "forestgreen","maroon1","lightsteelblue4")
-
-
-    # output$legend <- renderText({
-    # 
-    #   paste("Grupo", i, sep=' ')
-    # })
-
     output$grafclusterRed1 <- renderPlot({
       plot(carteRed(), type = "mapping", bgcol = colfijo[1:input$nclusRed][gruposRed()], shape = "straight")
       add.cluster.boundaries(carteRed(), clustering = gruposRed())
@@ -553,7 +543,6 @@ shinyServer(function(input, output) {
     
     output$varAcum <- renderPlot({
       barplot(varCum, space=0, col="coral",xlab="Dimensiones" ,ylab="Varianza relativa acumulada")
-      #lines(0:length(varRel),input$tol*ones(c(length(varRel)+1,1)), col="blue")
       lines(0:length(varRel),matrix(input$tol,length(varRel)+1,1), col="blue")
       axis(1,at=numdim()-0.5,labels = as.character(numdim()))
     })
@@ -735,7 +724,7 @@ shinyServer(function(input, output) {
 
 
              )
-      # selectInput("quegrupComp", "Que grupo de Total quieres visualizar", choices= 1:input$nclusTotal)
+      
 
     })
 
@@ -758,7 +747,7 @@ shinyServer(function(input, output) {
              "PCA" = subset(datClusterComp(), grupPCA == input$quegrupComp)
              
       )
-      # subset(datClusterComp(), grupTotal == input$quegrupComp)
+     
     })
     
     
@@ -789,14 +778,7 @@ shinyServer(function(input, output) {
                   }
       )
       
-      # matriu <- matrix(0,  1 ,input$nclusTotal)
-      # for (i in 1:as.numeric(input$nclusTotal))
-      # {
-      # aux<-subset(datClusterComp(), grupTotal == i)
-      # grupoMax <- as.numeric(names(sort(summary(as.factor(aux$grupPCA)), decreasing=T)[1]))
-      # matriu[i] <- sum(aux$grupPCA != grupoMax)
-      # 
-      # }
+     
 
       matriu
 
