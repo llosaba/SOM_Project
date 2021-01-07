@@ -7,9 +7,9 @@ https://cran.r-project.org/web/packages/kohonen/kohonen.pdf
 and the sourcecode here:
 https://github.com/cran/kohonen 
 
-The code in this repositori raise? a Shiny interactive platform where an user can choose diferents parameters to feed the algoritm, as well as choose wich data you want to classify. 
+The code in this repositori runs a Shiny interactive platform where an user can choose diferents parameters to feed the algoritm, as well as choose wich data you want to classify. 
 
 More information about this project can be found at
 (article citation)
 
-Be free to use this code, but please cite us! Regards?
+
