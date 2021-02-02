@@ -10,6 +10,6 @@ https://github.com/cran/kohonen
 The code in this repositori runs a Shiny interactive platform where an user can choose diferents parameters to feed the algorithm, as well as choose wich data you want to classify. 
 
 More information about this project can be found at
-(article citation)
+https://doi.org/10.4995/msel.2021.15023
 
 
